@@ -1,5 +1,5 @@
 # Regularized-Aware Discriminative Transformer Tracker for Satellite Videos
-[Xin Zhang], [Licheng Jiao](https://ieeexplore.ieee.org/author/37276095000), [Lingling Li](https://ieeexplore.ieee.org/author/37085521934), [Xiaoyan Yang](https://ieeexplore.ieee.org/author/480730827513052), [Zhongjian Huang], [Xu Liu](https://ieeexplore.ieee.org/author/37367391400), [Fang Liu](https://ieeexplore.ieee.org/author/37401762200), [Wenping Ma](https://ieeexplore.ieee.org/author/37575202300) and [Shuyuan Yang](https://ieeexplore.ieee.org/author/37279517100)
+[Xin Zhang](https://ieeexplore.ieee.org/author/37086137172), [Licheng Jiao](https://ieeexplore.ieee.org/author/37276095000), [Lingling Li](https://ieeexplore.ieee.org/author/37085521934), [Xiaoyan Yang](https://ieeexplore.ieee.org/author/480730827513052), [Zhongjian Huang](https://ieeexplore.ieee.org/author/37087039303), [Xu Liu](https://ieeexplore.ieee.org/author/37367391400), [Fang Liu](https://ieeexplore.ieee.org/author/37401762200), [Wenping Ma](https://ieeexplore.ieee.org/author/37575202300) and [Shuyuan Yang](https://ieeexplore.ieee.org/author/37279517100)
 
 ## Tracking Results
 
