@@ -1,0 +1,124 @@
+raining crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "../ltr/trainers/base_trainer.py", line 70, in train
+    self.train_epoch()
+  File "../ltr/trainers/ltr_trainer.py", line 82, in train_epoch
+    self.cycle_dataset(loader)
+  File "../ltr/trainers/ltr_trainer.py", line 63, in cycle_dataset
+    loss, stats = self.actor(data)
+  File "../ltr/actors/tracking.py", line 97, in __call__
+    test_proposals=data['test_proposals'])
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 161, in forward
+    outputs = self.parallel_apply(replicas, inputs, kwargs)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 171, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 86, in parallel_apply
+    output.reraise()
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/_utils.py", line 428, in reraise
+    raise self.exc_type(msg)
+RuntimeError: Caught RuntimeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 61, in _worker
+    output = module(*input, **kwargs)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/tracking/dimpnet.py", line 80, in forward
+    target_scores = self.classifier(train_feat_clf, test_feat_clf, train_label, train_bb, *args, **kwargs)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/target_classifier/linear_filter.py", line 66, in forward
+    encoded_feat, decoded_feat = self.transformer(train_feat, test_feat, train_label)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/target_classifier/transformer.py", line 31, in forward
+    encoded_memory, _ = self.encoder(train_feat, pos=None)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/target_classifier/transformer.py", line 176, in forward
+    output = layer(output, input_shape=src_shape, pos=pos)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/target_classifier/transformer.py", line 97, in forward
+    src = self.instance_norm(src, input_shape)
+  File "../ltr/models/target_classifier/transformer.py", line 68, in instance_norm
+    src = self.norm(src)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "../ltr/models/layers/normalization.py", line 42, in forward
+    x = (x-mean) / (var+self.eps).sqrt()
+RuntimeError: CUDA out of memory. Tried to allocate 76.00 MiB (GPU 0; 10.76 GiB total capacity; 8.32 GiB already allocated; 28.00 MiB free; 8.44 GiB reserved in total by PyTorch)
+
+
+Restarting training from last epoch ...
+No matching checkpoint file found
+^CTraining crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "../ltr/trainers/base_trainer.py", line 70, in train
+    self.train_epoch()
+  File "../ltr/trainers/ltr_trainer.py", line 82, in train_epoch
+    self.cycle_dataset(loader)
+  File "../ltr/trainers/ltr_trainer.py", line 54, in cycle_dataset
+    for i, data in enumerate(loader, 1):
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 352, in __iter__
+    return self._get_iterator()
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 294, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 801, in __init__
+    w.start()
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/queues.py", line 57, in __getstate__
+    def __getstate__(self):
+KeyboardInterrupt
+
+Restarting training from last epoch ...
+No matching checkpoint file found
+^C^C^C^C^CTraining crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "../ltr/trainers/base_trainer.py", line 70, in train
+    self.train_epoch()
+  File "../ltr/trainers/ltr_trainer.py", line 82, in train_epoch
+    self.cycle_dataset(loader)
+  File "../ltr/trainers/ltr_trainer.py", line 54, in cycle_dataset
+    for i, data in enumerate(loader, 1):
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 352, in __iter__
+    return self._get_iterator()
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 294, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 801, in __init__
+    w.start()
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+  File "/home/zxin/Documents/yes/envs/pytracking/lib/python3.7/multiprocessing/queues.py", line 57, in __getstate__
+    def __getstate__(self):
+KeyboardInterrupt
+
