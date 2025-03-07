@@ -1,5 +1,5 @@
 # Regularized-Aware Discriminative Transformer Tracker for Satellite Videos
-[Xin Zhang], [Licheng Jiao], [Lingling Li], [Xiaoyan Yang], [Zhongjian Huang], [Xu Liu], [Fang Liu], [Wenping Ma], [Shuyuan Yang]
+[Xin Zhang], [Licheng Jiao](https://ieeexplore.ieee.org/author/37276095000), [Lingling Li], [Xiaoyan Yang], [Zhongjian Huang], [Xu Liu], [Fang Liu], [Wenping Ma], [Shuyuan Yang]
 
 ## Tracking Results
 
@@ -29,6 +29,7 @@ This script will also download the default networks and set-up the environment.
 
 ```bash
 python pytracking/run_experiment.py result_path net_path trdimp_trackingnet cascade_level
+```
 
 ## Contact
 If you have any questions, please feel free to contact zhangxin131127@163.com
