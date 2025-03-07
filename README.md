@@ -3,7 +3,7 @@
 
 ## Tracking Results
 
-**Tracking results:** the raw results of RDTracker on 3 benchmarks including SV248S, VISO, and SatSOT can be found [here](https://github.com/Zxin131127/RDTracker/Results).
+**Tracking results:** the raw results of RDTracker on 3 benchmarks including SV248S, VISO, and SatSOT can be found in Results dir.
 
 ## Environment Setup
 
