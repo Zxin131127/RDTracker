@@ -1,5 +1,5 @@
-# Transformer Meets Tracker: Exploiting Temporal Context for Robust Visual Tracking
-[Ning Wang](https://594422814.github.io), [Wengang Zhou](http://staff.ustc.edu.cn/~zhwg/index.html), [Jie Wang](https://miralab.ai/), and [Houqiang Li](http://staff.ustc.edu.cn/~lihq/English.html) 
+# Regularized-Aware Discriminative Transformer Tracker for Satellite Videos
+[Xin Zhang], [Licheng Jiao], [Lingling Li], [Xiaoyan Yang], [Zhongjian Huang], [Xu Liu], [Fang Liu], [Wenping Ma], [Shuyuan Yang]
 
 ## Tracking Results
 
